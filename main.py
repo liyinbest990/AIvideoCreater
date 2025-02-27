@@ -30,4 +30,4 @@ def generate_script(subject, video_length, creativity, api_key):
     script = script_chain.invoke({"title": title, "duration": video_length}).content
 
     return title, script
-print(generate_script("sora模型", 1, 0.7, os.getenv("OPENAI_API_KEY")))
+# print(generate_script("sora模型", 1, 0.7, os.getenv("OPENAI_API_KEY")))
