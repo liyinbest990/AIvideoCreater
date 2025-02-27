@@ -17,7 +17,7 @@ def generate_script(subject, video_length, creativity, api_key):
              整体内容的表达方式要尽量轻松有趣，吸引年轻人。""")
         ]
     )
-
+    api_key = os.getenv("OPENAI_API_KEY")
     model = ChatOpenAI(openai_api_key=api_key, temperature = creativity)
     title_chain = title_template | model
     script_chain= script_template| model

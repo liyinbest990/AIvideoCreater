@@ -12,9 +12,9 @@ video_length = st.number_input("请输入视频的大致时长（单位：分钟
 creativity = st.slider("请输入视频脚本的创造力（数字小说明更严谨，数字大说明更多样）", min_value=0.0, max_value=1.0, value=0.2, step=0.1)
 submit = st.button("生成脚本")
 
-if submit and not openai_api_key:
-    st.info("请你输入你的OpenAI API 密钥")
-    st.stop()
+# if submit and not openai_api_key:
+#     st.info("请你输入你的OpenAI API 密钥")
+#     st.stop()
 if submit and not subject:
     st.info("请你提供视频的主题")
     st.stop()
