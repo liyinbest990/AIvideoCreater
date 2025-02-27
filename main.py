@@ -2,7 +2,8 @@ import os
 from langchain.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 #from langchain_community.utilities import WikipediaAPIWrapper
-def generate_script(subject, video_length, creativity, api_key):
+# def generate_script(subject, video_length, creativity, api_key):
+def generate_script(subject, video_length, creativity):
     title_template = ChatPromptTemplate.from_messages(
         [
             ("human", "请为‘{subject}’这个主题的视频像一个吸引人的标题")

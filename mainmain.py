@@ -3,9 +3,9 @@ from main import generate_script
 
 st.title("视频脚本生成器")
 
-with st.sidebar:
-    openai_api_key = st.text_input("请输入OpenAI API 密钥", type="password")
-    st.markdown("[获取OpenAI API密钥](https://platform.openai.com/usage?startDate=2025-02-12&endDate=2025-02-27)")
+# with st.sidebar:
+#     openai_api_key = st.text_input("请输入OpenAI API 密钥", type="password")
+#     st.markdown("[获取OpenAI API密钥](https://platform.openai.com/usage?startDate=2025-02-12&endDate=2025-02-27)")
 
 subject = st.text_input("请输入视频的主题")
 video_length = st.number_input("请输入视频的大致时长（单位：分钟）", min_value=0.1, step=0.1)
@@ -23,7 +23,8 @@ if submit and not video_length >= 0.1:
     st.stop()
 if submit:
     with st.spinner(("AI正在思考中，请稍等...")):
-        title, script = generate_script(subject, video_length, creativity, openai_api_key)
+        # title, script = generate_script(subject, video_length, creativity, openai_api_key)
+        title, script = generate_script(subject, video_length, creativity)
     st.success("视频脚本已生成！")
     st.subheader("标题：")
     st.write(title)
